@@ -20,6 +20,7 @@ namespace Calculator
 			mainPage = this;
 
 			Window.Current.CoreWindow.CharacterReceived += keyPress;
+
 		}
 
 		// page functions
@@ -31,11 +32,15 @@ namespace Calculator
 			// enable title bar full customiztion
 			CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
 			// title bar customization
-			ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
+		   ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
 
 			titleBar.ButtonBackgroundColor = Windows.UI.Colors.Transparent;
 			titleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.Transparent;
 			titleBar.ButtonInactiveForegroundColor = Windows.UI.Colors.White;
+
+			CalculatorGrid.Visibility = Visibility.Collapsed;
+			MainMenuGrid.Visibility = Visibility.Visible;
+
 		}
 
 		private void handleClearButtonClick(object sender, RoutedEventArgs e)

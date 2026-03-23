@@ -23,7 +23,7 @@
 
 	<!-- ButtonBlueStyle -->
 	<Style x:Key="ButtonBlueStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
-		<Setter Property="Background" Value="LightYellow" />
+	<Setter Property="Background" Value="LightYellow" />
 	</Style>
 
 	<!-- BigTextBlockStyle -->

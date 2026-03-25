@@ -77,6 +77,15 @@
                             Foreground="White"
                             Click="Exit_Click"/>
 
+					<Button x:Name="TripCalculatorButton"
+							Content="Trip Calculator"
+							Width="300"
+							Height="70"
+							FontSize="24"
+							Background="#444"
+							Foreground="White"
+							Click="TripCalculatorButton_Click"/>
+
 				</StackPanel>
 
 			</StackPanel>

@@ -118,5 +118,11 @@ namespace Calculator
 		{
 			Application.Current.Exit();
 		}
-	}
+
+		private void TripCalculatorButton_Click(object sender, RoutedEventArgs e)
+		{
+			var dialog = new Windows.UI.Popups.MessageDialog("Trip calculator C# code will be developed later.");
+			_ = dialog.ShowAsync();
+		}
+    }
 }

@@ -110,8 +110,8 @@ namespace Calculator
 
 		private void CurrencyCalculator_Click(object sender, RoutedEventArgs e)
 		{
-			// Currently commented out until merged
-			//	Frame.Navigate(typeof(CurrencyConverter));
+		
+			Frame.Navigate(typeof(CurrencyConverter));
 		}
 
 		private void Exit_Click(object sender, RoutedEventArgs e)

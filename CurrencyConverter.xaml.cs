@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace Calculator
 {
-	public sealed partial class currencyconverter : Page
+	public sealed partial class CurrencyConverter : Page
 	{
 		// Constants = conversion rates
 		// USD conversion
@@ -30,7 +30,7 @@ namespace Calculator
 		const double INR_TO_EUR = 0.013492774;
 		const double INR_TO_GBP = 0.0098339397;
 
-		public currencyconverter()
+		public CurrencyConverter()
 		{
 			InitializeComponent();
 		}

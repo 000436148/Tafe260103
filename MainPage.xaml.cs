@@ -20,7 +20,6 @@ namespace Calculator
 			mainPage = this;
 
 			Window.Current.CoreWindow.CharacterReceived += keyPress;
-
 		}
 
 		// page functions
@@ -31,8 +30,9 @@ namespace Calculator
 
 			// enable title bar full customiztion
 			CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+
 			// title bar customization
-		   ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
+			ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
 
 			titleBar.ButtonBackgroundColor = Windows.UI.Colors.Transparent;
 			titleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.Transparent;
@@ -40,7 +40,6 @@ namespace Calculator
 
 			CalculatorGrid.Visibility = Visibility.Collapsed;
 			MainMenuGrid.Visibility = Visibility.Visible;
-
 		}
 
 		private void handleClearButtonClick(object sender, RoutedEventArgs e)
@@ -94,6 +93,30 @@ namespace Calculator
 			{
 				Utils.Utils.handleBackspace();
 			}
+		}
+
+
+		// navigation button handlers
+		private void MathCalculator_Click(object sender, RoutedEventArgs e)
+		{
+			MainMenuGrid.Visibility = Visibility.Collapsed;
+			CalculatorGrid.Visibility = Visibility.Visible;
+		}
+
+		private void MortgageCalculator_Click(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(MortgageCalculator));
+		}
+
+		private void CurrencyCalculator_Click(object sender, RoutedEventArgs e)
+		{
+			// Currently commented out until merged
+			//	Frame.Navigate(typeof(CurrencyConverter));
+		}
+
+		private void Exit_Click(object sender, RoutedEventArgs e)
+		{
+			Application.Current.Exit();
 		}
 	}
 }

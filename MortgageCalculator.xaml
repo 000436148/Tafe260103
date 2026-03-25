@@ -1,0 +1,101 @@
+﻿<Page
+    x:Class="Calculator.MortgageCalculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="SlateGray">
+
+	<Grid Padding="40">
+
+		<StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Width="400"
+                    Spacing="20">
+
+			<TextBlock Text="Mortgage Calculator"
+                       FontSize="36"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       HorizontalAlignment="Center"/>
+
+			<!-- principal -->
+			<StackPanel>
+				<TextBlock Text="Principal borrowed ($)"
+                           Foreground="White"
+                           FontSize="18"/>
+				<TextBox x:Name="LoanAmountBox"
+                         FontSize="20"
+                         PlaceholderText="e.g. 350000"/>
+			</StackPanel>
+
+			<!-- years -->
+			<StackPanel>
+				<TextBlock Text="Years"
+                           Foreground="White"
+                           FontSize="18"/>
+				<TextBox x:Name="YearsBox"
+                         FontSize="20"
+                         PlaceholderText="e.g. 30"/>
+			</StackPanel>
+
+			<!-- months -->
+			<StackPanel>
+				<TextBlock Text="Months"
+                           Foreground="White"
+                           FontSize="18"/>
+				<TextBox x:Name="MonthsBox"
+                         FontSize="20"
+                         PlaceholderText="Optional"/>
+			</StackPanel>
+
+			<!-- annual Interest Rate -->
+			<StackPanel>
+				<TextBlock Text="Annual Interest Rate (%)"
+                           Foreground="White"
+                           FontSize="18"/>
+				<TextBox x:Name="AnnualRateBox"
+                         FontSize="20"
+                         PlaceholderText="e.g. 4.5"/>
+			</StackPanel>
+
+			<!-- monthly Interest Rate (calculated) -->
+			<StackPanel>
+				<TextBlock Text="Monthly Interest Rate"
+                           Foreground="White"
+                           FontSize="18"/>
+				<TextBox x:Name="MonthlyRateBox"
+                         FontSize="20"
+                         IsReadOnly="True"
+                         PlaceholderText="Calculated automatically"/>
+			</StackPanel>
+
+			<!-- monthly Repayment (calculated) -->
+			<StackPanel>
+				<TextBlock Text="Monthly Repayment"
+                           Foreground="White"
+                           FontSize="18"/>
+				<TextBox x:Name="RepaymentBox"
+                         FontSize="20"
+                         IsReadOnly="True"
+                         PlaceholderText="Calculated automatically"/>
+			</StackPanel>
+
+			<!-- calculate Button -->
+			<Button Content="Calculate"
+                    FontSize="24"
+                    Height="60"
+                    Background="#444"
+                    Foreground="White"
+                    Click="Calculate_Click"/>
+
+			<!-- back Button -->
+			<Button Content="Back to Menu"
+                    FontSize="20"
+                    Height="50"
+                    Background="#333"
+                    Foreground="White"
+                    Click="Back_Click"/>
+
+		</StackPanel>
+
+	</Grid>
+</Page>

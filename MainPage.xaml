@@ -21,58 +21,61 @@
 		</Grid.RowDefinitions>
 
 		<!-- main menu -->
-
 		<Grid x:Name="MainMenuGrid" Grid.Row="0" Background="SlateGray">
 
 			<!-- Image -->
 			<Image Source="Assets/abacus.jpg"
-               Width="250"
-               Height="250"
-               HorizontalAlignment="Right"
-				VerticalAlignment="Top"/>
+                   Width="250"
+                   Height="250"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"/>
 
 			<StackPanel VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                Spacing="20">
+                        HorizontalAlignment="Center"
+                        Spacing="20">
 
 				<!-- Title -->
 				<TextBlock Text="Universal Calculator"
-                   FontSize="40"
-                   FontWeight="Bold"
-                   Foreground="White"
-                   HorizontalAlignment="Center"/>
+                           FontSize="40"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
 
 				<!-- Buttons -->
 				<StackPanel Spacing="15"
-                    HorizontalAlignment="Center">
+                            HorizontalAlignment="Center">
 
 					<Button Content="Math Calculator"
-                    Width="300"
-                    Height="70"
-                    FontSize="24"
-                    Background="#444"
-                    Foreground="White"/>
+                            Width="300"
+                            Height="70"
+                            FontSize="24"
+                            Background="#444"
+                            Foreground="White"
+                            Click="MathCalculator_Click"/>
 
 					<Button Content="Mortgage Calculator"
-                    Width="300"
-                    Height="70"
-                    FontSize="24"
-                    Background="#444"
-                    Foreground="White"/>
+                            Width="300"
+                            Height="70"
+                            FontSize="24"
+                            Background="#444"
+                            Foreground="White"
+                            Click="MortgageCalculator_Click"/>
 
 					<Button Content="Currency Calculator"
-                    Width="300"
-                    Height="70"
-                    FontSize="24"
-                    Background="#444"
-                    Foreground="White"/>
+                            Width="300"
+                            Height="70"
+                            FontSize="24"
+                            Background="#444"
+                            Foreground="White"
+                            Click="CurrencyCalculator_Click"/>
 
 					<Button Content="Exit"
-                    Width="300"
-                    Height="70"
-                    FontSize="24"
-                    Background="#444"
-                    Foreground="White"/>
+                            Width="300"
+                            Height="70"
+                            FontSize="24"
+                            Background="#444"
+                            Foreground="White"
+                            Click="Exit_Click"/>
 
 				</StackPanel>
 
@@ -80,10 +83,7 @@
 
 		</Grid>
 
-
-
 		<!-- ui -->
-
 		<Grid x:Name="CalculatorGrid" Grid.Row="0"
               Style="{StaticResource GridStyle}"
               Margin="4,32,4,4"
